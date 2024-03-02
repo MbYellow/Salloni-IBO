@@ -9,16 +9,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-image: url(Images/gettyimages-1155467329_sf.webp+);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #8c8a8a;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
 h1 {
@@ -31,9 +34,9 @@ form {
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
+   display: block;
+   margin-bottom: 5px;
+   color: #333;
 }
 
 input[type="text"],
@@ -45,9 +48,10 @@ select {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+
 }
 
-button {
+.button {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -56,36 +60,52 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background-color: #555;
 }
 
 </style>
 </head>
 <body>
+    <div class="container">
+        <div class="container-time">
+            <h2 class="heading">Time Open</h2>
+            <h3 Class="heading-days">Monday-Saturday</h3>
+            <p>9am - 7pm</p>
+
+            <h4 class="heading-phone">Call Us: (383) 44-457-227</h4>
+
+        </div>
+
+    </div>
 
 <div class="container">
-    <h1>Make an Appointment at Salloni IBO</h1>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="service">Select Service:</label>
-        <select id="service" name="service">
-            <option value="waxing">Waxing</option>
-            <option value="facial">Facial Waxing</option>
-            <option value="body">Body Waxing</option>
-        </select>
-
-        <button type="submit">Submit Appointment</button>
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Not functional at the moment</h3>
+        <input type="text" id="name" placeholder="Your name" required>
+        <input type="text" id="email" placeholder="Email Id" required>
+        <input type="text" id="phone" placeholder="Phone no." required>
+        <textarea id="message" rows="4" placeholder="Si mund te ju ndihmojme?"></textarea>
+        <button type="submit">Make Appointment</button>    
     </form>
 </div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "shabanileart63@gmail.com",
+    Password : "Learti2008",
+    To : 'shabanileart63@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact form Enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+    }
+</script>
 
 </body>
 </html>
