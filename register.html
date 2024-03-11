@@ -80,7 +80,7 @@ select {
     </div>
 
 <div class="container">
-    <form onsubmit="sendEmail(); reset(); return false;">
+<form class="action=https://formsubmit.co/shabanileart632gmail.com" method="POST">
         <h3>Not functional at the moment</h3>
         <input type="text" id="name" placeholder="Your name" required>
         <input type="text" id="email" placeholder="Email Id" required>
@@ -89,23 +89,6 @@ select {
         <button type="submit">Make Appointment</button>    
     </form>
 </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendEmail(){
-        Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "shabanileart63@gmail.com",
-    Password : "Learti2008",
-    To : 'shabanileart63@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Contact form Enquiry",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-
-    }
-</script>
 
 </body>
 </html>
