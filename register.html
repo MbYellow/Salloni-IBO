@@ -1,94 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Make an Appointment - Salloni IBO</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url(Images/gettyimages-1155467329_sf.webp+);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #8c8a8a;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-form {
-    margin-top: 20px;
-}
-
-label {
-   display: block;
-   margin-bottom: 5px;
-   color: #333;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="date"],
-select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-
-}
-
-.button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #555;
-}
-
-</style>
-</head>
-<body>
-    <div class="container">
-        <div class="container-time">
-            <h2 class="heading">Time Open</h2>
-            <h3 Class="heading-days">Monday-Saturday</h3>
-            <p>9am - 7pm</p>
-
-            <h4 class="heading-phone">Call Us: (383) 44-457-227</h4>
-
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form To Email Using JavaScript</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form class="row g-3" action="https://formsubmit.co/shabanileart63@gmail.com" method="POST">
+                <h3>Reservation</h3>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="emailt" id="email" name="email" placeholder="Email id" required>
+                <input type="text" id="phone" name="phone" placeholder="Phone no." required>
+                <textarea id="message" name="comments, questions" rows="4" placeholder="How can we help you"></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
-
-    </div>
-
-<div class="container">
-<form class="action=https://formsubmit.co/shabanileart632gmail.com" method="POST">
-        <h3>Not functional at the moment</h3>
-        <input type="text" id="name" placeholder="Your name" required>
-        <input type="text" id="email" placeholder="Email Id" required>
-        <input type="text" id="phone" placeholder="Phone no." required>
-        <textarea id="message" rows="4" placeholder="Si mund te ju ndihmojme?"></textarea>
-        <button type="submit">Make Appointment</button>    
-    </form>
-</div>
-
-</body>
+     </script>    
+    </body>
 </html>
